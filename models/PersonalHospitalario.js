@@ -19,7 +19,8 @@ const personalHospitalarioSchema = new mongoose.Schema({
 	fechaIngreso: String,
 	especialidad: String,
 	gestionHorarios: String,
-	direcciones: Array
+	direcciones: Array,
+	tipoContrato:String
 });
 
 

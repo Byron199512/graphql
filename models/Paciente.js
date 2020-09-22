@@ -19,7 +19,8 @@ const pacienteSchema = new mongoose.Schema({
 	tipoSangre: String,
 	nombreContacto: String,
 	telefonoContacto: String,
-	tipoIdentificacion: String
+	tipoIdentificacion: String,
+	numeroHistoriaClinica:String
 });
 
 module.exports = mongoose.model('paciente', pacienteSchema);

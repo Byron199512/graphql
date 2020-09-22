@@ -15,7 +15,8 @@ const medicoTratanteSchema = new mongoose.Schema({
 	tipoSangre: String,
 	fechaIngreso: String,
 	tipoIdentificacion: String,
-	especialidad: String
+	especialidad: String,
+	numeroRegistroProfesional:String,
 });
 
 module.exports = mongoose.model('medicoTratante', medicoTratanteSchema);

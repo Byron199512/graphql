@@ -842,6 +842,7 @@ totalLogs: (root) => {
             input.password= bcryptjs.hashSync(password,salt);
             const nuevoPersonalHospitalario =await new PersonalHospitalario({
 				nombres: input.nombres,
+				tipoContrato:input.tipoContrato,
 				apellidos: input.apellidos,
 				identificacion: input.identificacion,
 				emails: input.emails,
@@ -1003,6 +1004,7 @@ totalLogs: (root) => {
 				estadoCivil: input.estadoCivil,
 				procedencia: input.procedencia,
 				ocupacion: input.ocupacion,
+				numeroHistoriaClinica:input.numeroHistoriaClinica,
 				estado: true,
 				imagen: input.imagen,
 				telefonos: input.telefonos,
