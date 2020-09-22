@@ -942,6 +942,7 @@ totalLogs: (root) => {
 			const nuevoMedicoTratante = new MedicoTratante({
 				nombres: input.nombres,
 				apellidos: input.apellidos,
+				numeroRegistroProfesional:input.numeroRegistroProfesional,
 				identificacion: input.identificacion,
 				fechaNacimiento: input.fechaNacimiento,
 				imagen: input.imagen,
