@@ -865,7 +865,7 @@ totalLogs: (root) => {
 			const usuario = nuevoPersonalHospitalario.usuario;
             const identificacion = nuevoPersonalHospitalario.identificacion;
            
-			const existeCedula = await PersonalHospitalario.findOne({ identificacion });
+			const existeCedula = await PersonalHospitalario.findOne({ identificacion },{estado:true});
 			if (existeCedula) {
 				throw new Error('El usuario con la identificacion ingresada ya existe');
 			}
@@ -959,7 +959,7 @@ totalLogs: (root) => {
 			});
 
 			const identificacion = nuevoMedicoTratante.identificacion;
-			const existeIdentificacion = await MedicoTratante.findOne({ identificacion });
+			const existeIdentificacion = await MedicoTratante.findOne({ identificacion },{estado:true});
 			if (existeIdentificacion) {
 				throw new Error('El usuario con la identificacion ingresada ya existe');
 			}
@@ -1017,7 +1017,7 @@ totalLogs: (root) => {
 				tipoIdentificacion: input.tipoIdentificacion
 			});
 			const identificacion = nuevoPaciente.identificacion;
-			const existePaciente = await Paciente.findOne({ identificacion });
+			const existePaciente = await Paciente.findOne({ identificacion },{estado:true});
 			if (existePaciente) {
 				throw new Error('El paciente con la identificacion ingresada ya existe');
 			}
