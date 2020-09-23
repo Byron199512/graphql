@@ -959,7 +959,7 @@ totalLogs: (root) => {
 			});
 
 			const identificacion = nuevoMedicoTratante.identificacion;
-			const existeIdentificacion = await MedicoTratante.findOne({ identificacion },{estado:true});
+			const existeIdentificacion = await MedicoTratante.findOne({$and: [{ identificacion },{estado:true}]});
 			if (existeIdentificacion) {
 				throw new Error('El usuario con la identificacion ingresada ya existe');
 			}
